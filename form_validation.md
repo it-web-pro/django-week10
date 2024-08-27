@@ -53,6 +53,7 @@ class ContactForm(forms.Form):
                 raise ValidationError(
                     "Did not send for 'help' in the subject despite CC'ing yourself."
                 )
+        return cleaned_data
 ```
 
 ในกรณีนี้การแสดง error จะไม่ได้อยู่ที่แต่ละ field จะอยู่ที่ด้านบนสุดของ form ซึ่งจะอยู่ในตัวแปร {{ form.non_field_errors }}
@@ -73,4 +74,6 @@ class ContactForm(forms.Form):
             msg = "Must put 'help' in subject when cc'ing yourself."
             self.add_error("cc_myself", msg)
             self.add_error("subject", msg)
+
+        return cleaned_data
 ```
