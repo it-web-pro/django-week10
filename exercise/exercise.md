@@ -1,20 +1,21 @@
 # WEEK 10 EXCERCISE
 
 - จะต้องใช้แบบฝึกหัดใน WEEK 9 ในการทำแบบฝึกหัดครังนี้ต่อครับ
+
 - ไฟล์ template ที่เกี่ยวข้อง
 
-    ```text
-    templates/
-    - base.hmtl
-    - course.hmtl
-    - create_course
-    - create_student.html
-    - faculty.html
-    - index.html
-    - nav.html
-    - professor.html
-    - update_student.html
-    ```
+```text
+templates/
+- base.hmtl
+- course.hmtl
+- create_course
+- create_student.html
+- faculty.html
+- index.html
+- nav.html
+- professor.html
+- update_student.html
+```
 
 ## Part 1: Student Model Form
 
@@ -32,13 +33,11 @@
 
 ![create_course](images/create_course.png)
 
-2.2 บันทึกข้อมูลโปรเจคใหม่ หลังจากยันทึกสำเร็จให้ redirect กลับไปที่หน้า project list (0.5 คะแนน)
+2.2 Implement สร้างข้อมูล Course ใหม่ให้สมบูรณ์ โดยหลังจากยันทึกสำเร็จให้ redirect กลับไปที่หน้า Course Dashboard (0.5 คะแนน)
 
-![project-list](images/project-list.png) 
+2.3 ในหน้า Course Dashboard ในตารางข้อมูล ให้เพิ่ม Column ใหม่ชื่อว่า "Action" โดย Column นี้จะเป็นปุ่ม Edit ที่กดไปแล้วจะเป็นหน้า form แก้ไขรายละเอียด และให้ Implement การแก้ไขข้อมูล Course ให้สมบูรณ์ (0.5 คะแนน)
 
-2.3 เมื่อกดปุ่มแก้ไขที่หน้า project list ให้ไปยังหน้า project detail และแสดงผล Form สำหรับแก้ไขข้อมูลโปรเจคดังภาพ (0.5 คะแนน)
-
-**Hint:** ให้สร้าง view ใหม่สำหรับใช้ update ข้อมูล project ตัวอย่างการใช้ form ในการ update ข้อมูลดังด้านล่าง
+**Hint:** ให้สร้าง view ใหม่สำหรับใช้ update ข้อมูล course ตัวอย่างการใช้ form ในการ update ข้อมูลดังด้านล่าง
 
 ```python
 from django.http import HttpResponse
@@ -59,8 +58,9 @@ class UpdateArticleView(View):
     return HttpResponse("error")
 ```
 
-![project-form](images/project-detail.png)
+![course_add_edit](images/course_edit_btn.png)
+![edit_course](images/edit_course.png)
 
-2.4 เมื่อกดปุ่ม Save ให้ทำการแก้ไขข้อมูล project และสามารถเพิ่มพนักงานเข้ามาใน Project ได้ หลังจากแก้ไขให้ redirect กลับมาหน้าเดิมพร้อมแสดงข้อมูลที่ถูกแก้ไขแล้ว (1 คะแนน)
+2.4 เพิ่มการ Validate Setion โดย `End time` ต้องมากกว่า `Start time` (1 คะแนน)
 
-**Hint:** ปุ่ม "kick staff" ไม่ต้องทำนะครับ เอาแค่ให้เพิ่ง staff ได้เมื่อกด Save พอครับ หรือถ้าใครอยากลองทำก็ได้ครับ
+![validate_section](images/validate_section.png)
