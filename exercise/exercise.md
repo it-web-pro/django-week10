@@ -5,26 +5,32 @@
 
     ```text
     templates/
-        - project_detail.html
-        - project_form.html
-        - project.html
+    - base.hmtl
+    - course.hmtl
+    - create_course
+    - create_student.html
+    - faculty.html
+    - index.html
+    - nav.html
+    - professor.html
+    - update_student.html
     ```
 
-## Part 1: Employee Model Form
+## Part 1: Student Model Form
 
-1.1 ทำการเปลี่ยน class `EmployeeForm(forms.Form)` มาเป็น `ModelForm` และแก้ไขใน view ให้สามารถบันทึกข้อมูล emaployee ได้เหมือนเดิม (0.5 คะแนน)
+1.1 ทำการเปลี่ยน class `StudentForm(forms.Form)` มาเป็น `ModelForm` และแก้ไขใน view ให้สามารถบันทึกข้อมูล emaployee ได้เหมือนเดิม
 
-1.2 เพิ่มการ validate ข้อมูลใน field `hire_date` ว่าจะต้องไม่เป็นวันในอนาคต (0.5 คะแนน)
+1.2 เพิ่มการ validate ข้อมูลใน field `email` ว่าจะต้องลงท้ายด้วย @kmitl.ac.th
 
 **Hint:** ให้ทำการ validate โดยการ clean ใน class form
 
-## Part 2: Project Model Form
+## Part 2: Course Model Form
 
-2.1 กำหนด path ให้กดปุ่ม New Project ไปยังหน้า form สำหรับเพิ่มข้อมูล Project `project_form.html` แสดงหน้า form ให้ถูกต้องดังภาพ (1 คะแนน)
+2.1 กำหนด path ให้กดปุ่ม Create Course ไปยังหน้า form สำหรับเพิ่มข้อมูล course `create_course.html` แสดงหน้า form ให้ถูกต้องดังภาพ
 
-**Hint:** ให้สร้าง `ModelForm` สำหรับ form สร้าง project และทำการ validate ว่า start_date จะต้องเป็นวันก่อน due_date
+**Hint:** ให้สร้าง `ModelForm` สำหรับ form สร้าง course และ section
 
-![project-form](images/form_project.png)
+![create_course](images/create_course.png)
 
 2.2 บันทึกข้อมูลโปรเจคใหม่ หลังจากยันทึกสำเร็จให้ redirect กลับไปที่หน้า project list (0.5 คะแนน)
 
