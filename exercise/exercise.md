@@ -8,7 +8,7 @@
 templates/
 - base.hmtl
 - course.hmtl
-- create_course
+- create_course.html
 - create_student.html
 - faculty.html
 - index.html
@@ -19,11 +19,11 @@ templates/
 
 ## Part 1: Student Model Form
 
-1.1 ทำการเปลี่ยน class `StudentForm(forms.Form)` มาเป็น `ModelForm` และแก้ไขใน view ให้สามารถบันทึกข้อมูล emaployee ได้เหมือนเดิม
+1.1 ทำการเปลี่ยน class `StudentForm(forms.Form)` มาเป็น `ModelForm` และแก้ไขใน view ให้สามารถบันทึกข้อมูล emaployee ได้เหมือนเดิม (0.5 คะแนน)
 
-1.2 เพิ่มการ validate ข้อมูลใน field `email` ว่าจะต้องลงท้ายด้วย @kmitl.ac.th
+1.2 เพิ่มการ validate ข้อมูลใน field `email` ว่าจะต้องลงท้ายด้วย @kmitl.ac.th (0.5 คะแนน)
 
-**Hint:** ให้ทำการ validate โดยการ clean ใน class form
+**Hint:** ให้ทำการ validate โดยการ clean ใน class Form
 
 ## Part 2: Course Model Form
 
@@ -33,9 +33,9 @@ templates/
 
 ![create_course](images/create_course.png)
 
-2.2 Implement สร้างข้อมูล Course ใหม่ให้สมบูรณ์ โดยหลังจากยันทึกสำเร็จให้ redirect กลับไปที่หน้า Course Dashboard (0.5 คะแนน)
+และทำการ implement `View` สำหรับบันทึกการสร้างข้อมูล Course ใหม่ให้สมบูรณ์ โดยหลังจากยันทึกสำเร็จให้ redirect กลับไปที่หน้า Course Dashboard (0.5 คะแนน)
 
-2.3 ในหน้า Course Dashboard ในตารางข้อมูล ให้เพิ่ม Column ใหม่ชื่อว่า "Action" โดย Column นี้จะเป็นปุ่ม Edit ที่กดไปแล้วจะเป็นหน้า form แก้ไขรายละเอียด และให้ Implement การแก้ไขข้อมูล Course ให้สมบูรณ์ (0.5 คะแนน)
+2.2 ในหน้า Course Dashboard ในตารางข้อมูล ให้เพิ่ม Column ใหม่ชื่อว่า "Action" โดย Column นี้จะเป็นปุ่ม Edit ที่กดไปแล้วจะเป็นหน้า form แก้ไขรายละเอียด และให้ Implement การแก้ไขข้อมูล Course ให้สมบูรณ์ (0.5 คะแนน)
 
 **Hint:** ให้สร้าง view ใหม่สำหรับใช้ update ข้อมูล course ตัวอย่างการใช้ form ในการ update ข้อมูลดังด้านล่าง
 
@@ -61,6 +61,6 @@ class UpdateArticleView(View):
 ![course_add_edit](images/course_edit_btn.png)
 ![edit_course](images/edit_course.png)
 
-2.4 เพิ่มการ Validate Setion โดย `End time` ต้องมากกว่า `Start time` (1 คะแนน)
+2.3 เพิ่มการ Validate Setion โดย `End time` ต้องมากกว่า `Start time` และ `Capacity` จะต้องมากกว่า 20  (1 คะแนน)
 
 ![validate_section](images/validate_section.png)

@@ -522,3 +522,7 @@ class BookingCreate(View):
 ```
 
 ทดลองทำการ booking ดูได้เลยครับ!
+
+### Exercise:
+
+ให้ลองเพิ่มการ validate ใน `BookingForm` โดยการจองนั้นจะต้องจองได้เฉพาะห้องประเภท `Lecture` หรือ `Conference` เท่านั้น
