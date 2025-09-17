@@ -1,7 +1,6 @@
 # WEEK 10 EXCERCISE
 
 - จะต้องใช้แบบฝึกหัดใน WEEK 9 ในการทำแบบฝึกหัดครังนี้ต่อครับ
-
 - ไฟล์ template ที่เกี่ยวข้อง
 
 ```text
@@ -19,7 +18,7 @@ templates/
 
 ## Part 1: Student Model Form
 
-1.1 ทำการเปลี่ยน class `StudentForm(forms.Form)` มาเป็น `ModelForm` และแก้ไขใน view ให้สามารถบันทึกข้อมูล emaployee ได้เหมือนเดิม (0.5 คะแนน)
+1.1 ทำการเปลี่ยน class `StudentForm(forms.Form)` มาเป็น `ModelForm` และแก้ไขใน view ให้สามารถบันทึกข้อมูล student ได้เหมือนเดิม (0.5 คะแนน)
 
 1.2 เพิ่มการ validate ข้อมูลใน field `email` ว่าจะต้องลงท้ายด้วย @kmitl.ac.th (0.5 คะแนน)
 
